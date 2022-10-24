@@ -40,18 +40,19 @@
 \newcommand{\pathFIG}{./figures}
 
 % Article information
-\title{High-dimensional imputation for the social sciences: a comparison of state-of-the-art methods}
-\shorttitle{[PREPRINT] High-dimensional imputation for the social sciences}
+% Article information
+\title{Paper title}
+\shorttitle{Short title}
 \twoauthors
 	{Edoardo Costantini}
 	{Author 2}
 \twoaffiliations
 	{Tilburg University, Department of Methodology and Statistics}
-	{Some affiliation}
+	{Utrecht University, Department of Methodology and Statistics}
 \authornote{
-  Corresponding author's email address: \\
-  e.costantini@email.address; \\
-  This article has been submitted to a journal but it was published on https://arxiv.org before formal peer review.
+  Corresponding author's contacts: \\
+  e.costantini@tilburguniversity.edu; \\
+  +31 **************
   }
 
 % Abstract
@@ -69,7 +70,6 @@
     \Sexpr{knit_child("sec-introduction.Rnw")}
     \Sexpr{knit_child("sec-methods.Rnw")}
     \Sexpr{knit_child("sec-study-1.Rnw")}
-    \Sexpr{knit_child("sec-study-2.Rnw")}
     \Sexpr{knit_child("sec-limits.Rnw")}
     \Sexpr{knit_child("sec-discussion.Rnw")}
     

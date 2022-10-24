@@ -9,142 +9,66 @@ This is the template for a LaTex Rnw project. Editing should be done only in the
 This directory contains:
 - **section_##.Rnw**, the files where the actual content of the paper is written.
 - **document_version.Rnw**, the global files calling all the other section files to make up the final manuscript.
-- **compile.sh** is a shell script to compile a pdf of any **document_version.Rnw** (the comments within it describe how to run the shell script). For this script to work the relative paths of files must remain the same as in the original folder.
+- **compile.sh** is a shell script to compile a pdf of any **document_version.Rnw**. For this script to work the relative paths of files must remain the same as in the original folder.
+To get the pdf version of your manuscript simply type the following in a terminal window working in the root folder of your paper project:
+  <pre><code>. compile.sh document_version.Rnw</code></pre>
+  which will create a `document_version.pdf` in the pdf folder.
+  For example,
+  <pre><code>. compile.sh main-arxiv.Rnw</code></pre>
+  produces the `main-arxiv.pdf` file
 - **makearxiv.sh** is a shell script to create a zip archive that can be uploaded on arxiv.org and compiled by AutoTeX.
 - **bib** is the folder containing the .bib file for the bibliography.
 - **code** is the folder containing the R scripts defining the plots.
   The scripts for the simulation study plots use plotting functions that are stored in the script `functions.R`.
-- **data** a folder containig the data files to plot
-- **figure** is the folder where the pictures are stored.
+  - `knit-rnw.R` is the script that prepares the R environment to generate the results to be reported in the paper and knits the document
+  - `functions.R` is a script containing possibly complex plotting functions used multiple times in your paper.
+  - `sec-study-1-plots.R` contains the call to produce a specific plot to be placed where requested (based on the "title")
+- **data** a folder containing the data files to plot
+  - `mtcars.rds` is just an example dataset
+- **figure** is the folder where the pictures will be stored. You do not need to actively interact with this folder.
 - **style** is the folder containing the .cls and .bst files for general formatting of the manuscript.
 
 # Repository structure
 
 Here is the project structure:
 ```
-├── BMR.Rnw
-├── BMR.tex
+.
 ├── README.md
-├── arxiv.Rnw
-├── arxiv.tex
 ├── bib
 │   └── bibshelf.bib
 ├── code
 │   ├── functions.R
 │   ├── knit-rnw.R
-│   ├── plot-convergence-sup.R
-│   ├── plot-fdd.R
-│   ├── plot-hd.R
-│   ├── plot-ld-sup.R
-│   └── plot-ld.R
+│   └── sec-study-1-plots.R
 ├── compile.sh
-├── draft.Rnw
-├── draft.tex
+├── data
+│   └── mtcars.rds
 ├── figure
-│   ├── plot-bias-correlation-1.pdf
-│   ├── plot-bias-correlation-hd-1.pdf
-│   ├── plot-bias-correlation-refs-1.pdf
-│   ├── plot-bias-covariance-1.pdf
-│   ├── plot-bias-mean-1.pdf
-│   ├── plot-bias-variance-1.pdf
-│   ├── plot-cic-correlation-1.pdf
-│   ├── plot-cic-correlation-hd-1.pdf
-│   ├── plot-cic-correlation-refs-1.pdf
-│   ├── plot-cic-covariance-1.pdf
-│   ├── plot-cic-mean-1.pdf
-│   ├── plot-cic-variance-1.pdf
-│   ├── plot-ciw-correlation-1.pdf
-│   ├── plot-ciw-correlation-hd-1.pdf
-│   ├── plot-convergence-case-study-default-yc-1.pdf
-│   ├── plot-convergence-case-study-default-yp-1.pdf
-│   ├── plot-convergence-case-study-expert-yc-1.pdf
-│   ├── plot-convergence-case-study-expert-yp-1.pdf
-│   ├── plot-convergence-case-study-pcraux-yc-1.pdf
-│   ├── plot-convergence-case-study-pcraux-yp-1.pdf
-│   ├── plot-convergence-case-study-si-yc-1.pdf
-│   ├── plot-convergence-case-study-si-yp-1.pdf
-│   ├── plot-convergence-case-study-vbv-yc-1.pdf
-│   ├── plot-convergence-case-study-vbv-yp-1.pdf
-│   ├── plot-convergence-sim2-AUX-1.pdf
-│   ├── plot-convergence-sim2-MIMI-1.pdf
-│   ├── plot-convergence-sim2-MIOP-1.pdf
-│   ├── plot-convergence-sim2-MIOR-1.pdf
-│   ├── plot-convergence-sim2-VBV-1.pdf
-│   ├── plot-fdd-yc-1.pdf
-│   ├── plot-fdd-yp-1.pdf
-│   ├── plot-time-1.pdf
-│   └── plot-time-hd-1.pdf
+│   ├── plot-distribution-1.pdf
+│   ├── plot-mice-1.pdf
+│   └── plot-pdf-1.pdf
+├── main-arxiv.Rnw
+├── main-arxiv.tex
+├── main-journal.Rnw
+├── main-journal.tex
 ├── makearxiv.sh
 ├── pdf
-│   ├── BMR.pdf
-│   ├── BMR_diff_e756858a0402918014027c8e14e48fdbafd1321c_64cbdd0bfec164c5bac8cc7dd12c730f1006dee6.pdf
-│   ├── BMR_diff_e756858a0402918014027c8e14e48fdbafd1321c_d7518bf4e01c992f99105b9f7021256441216ef0.pdf
-│   ├── arxiv.pdf
-│   ├── draft.pdf
-│   ├── journal.pdf
-│   ├── response-to-comments.pdf
-│   └── sup.pdf
-├── rds
-│   ├── 20211220_144954_res.rds
-│   ├── 8469421_main_gg_shape.rds
-│   ├── 8469421_time_gg_shape.rds
-│   ├── 9950505_main_gg_shape.rds
-│   ├── 9950505_time_gg_shape.rds
-│   ├── 9987321_main_gg_shape.rds
-│   ├── 9987321_time_gg_shape.rds
-│   ├── Rnw-snapshot.rds
-│   ├── convergence-default.rds
-│   ├── convergence-expert.rds
-│   ├── convergence-pcraux.rds
-│   ├── convergence-si-4-aux-all.rds
-│   ├── convergence-sim2-p242.rds
-│   └── convergence-vbv.rds
-├── section_01.Rnw
-├── section_02.Rnw
-├── section_03.Rnw
-├── section_04.Rnw
-├── section_05.Rnw
-├── section_06.Rnw
-├── section_abstract.tex
-├── section_biblio.tex
-├── section_conflict.tex
-├── section_funding.tex
+│   ├── main-arxiv.pdf
+│   └── main-journal.pdf
+├── sec-abstract.Rnw
+├── sec-biblio.Rnw
+├── sec-conclusions.Rnw
+├── sec-discussion.Rnw
+├── sec-introduction.Rnw
+├── sec-limits.Rnw
+├── sec-methods.Rnw
+├── sec-study-1.Rnw
+├── sec-study-2.Rnw
 ├── style
 │   ├── asj.bst
 │   ├── response.cls
 │   └── sagej.cls
 ├── submissions
-│   ├── BRM-round-0
-│   │   ├── decision-letter.pdf
-│   │   └── draft-proof.pdf
-│   ├── BRM-round-1
-│   │   ├── cover-letter.docx
-│   │   └── response-to-comments.tex
-│   ├── arxiv.zip
-│   └── feedback
-│       ├── v1
-│       │   ├── edo_paper2_draft_KS_original.pdf
-│       │   ├── original
-│       │   │   ├── README.md
-│       │   │   ├── edo_paper2_draft-kml.pdf
-│       │   │   └── edo_paper2_draft_KS.pdf
-│       │   └── working
-│       │       ├── KS.pdf
-│       │       ├── README.md
-│       │       └── kml.pdf
-│       └── v2
-│           ├── original
-│           │   ├── BMR_KS-KML.pdf
-│           │   ├── BMR_KS.pdf
-│           │   └── README.md
-│           └── working
-│               ├── BMR_KS-KML.pdf
-│               ├── BMR_KS.pdf
-│               └── README.md
-├── sup.Rnw
-├── sup.tex
-├── sup_convergence.Rnw
-├── sup_study_1.Rnw
-├── tmp
+├── sup-journal.Rnw
 └── trackChanges.sh
 ```

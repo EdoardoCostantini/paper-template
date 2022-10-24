@@ -1,7 +1,7 @@
 \section{Introduction}
 
-    A strong and commanding introduction
+    A strong and commanding introduction.
 
 \subsection{The power of knowing}
 
-    Followed by a good description
+    Followed by a good description of previous studies \citep{collinsEtAl:2001}.

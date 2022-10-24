@@ -1,5 +1,5 @@
 # Project:   paper-template
-# Objective: Initialize environment and knit any main document
+# Objective: Initialize the environment and knit any main document
 # Author:    Edoardo Costantini
 # Created:   2022-10-13
 # Modified:  2022-10-13

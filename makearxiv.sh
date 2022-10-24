@@ -1,5 +1,5 @@
 #!/bin/bash
-# Project:  paper-mipcr-compare
+# Project:  paper-template
 # Topic:    Bash script to prepare submission archive for arXve.org
 # Author:   Edoardo Costantini
 # Created:  2022-06-27

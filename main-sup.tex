@@ -1,12 +1,12 @@
-% Project:  paper-comparison
-% Type:     pre-print version
+% Project:  paper-template
+% Type:     supplementary material
 % Author:   Edoardo Costantini
-% Created:  2022-08-29
-% Modified: 2022-08-29
+% Created:  2021-12-17
+% Modified: 2022-06-10
 
 % Preamble ------------------------------------------------------------------- %
 
-\documentclass[a4paper,doc,floatsintext,natbib]{apa6}\usepackage[]{graphicx}\usepackage[]{xcolor}
+\documentclass[a4paper,man,floatsintext,natbib]{apa6}\usepackage[]{graphicx}\usepackage[]{xcolor}
 % maxwidth is the original width if it is less than linewidth
 % otherwise use linewidth (to make sure the graphics do not exceed the margin)
 \makeatletter
@@ -57,39 +57,28 @@
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
 \usepackage{alltt}
+% \documentclass[a4paper,man,natbib]{apa6}
 
 % Packagaes
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
-\usepackage{bm}
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
-\usepackage[
-	colorlinks,
-	bookmarksopen,
-	bookmarksnumbered,
-	citecolor=red,
-	urlcolor=red]{hyperref}	% automatic pdf outline and hyperlinks style
-\usepackage{lineno} % for line numbering
+\usepackage{hyperref}
+\usepackage{alltt}  % for something Rnw related
+\usepackage{framed} % for something Rnw related
+\usepackage{lineno}
 \usepackage{color}
-\usepackage{xcolor}			% for colors to track changes
 \usepackage{placeins} 		% for FloatBarrier
-\usepackage[normalem]{ulem} % for strikeout corrections
-\usepackage{lineno} % for line numbering
-\usepackage{tabularx}
-\usepackage{adjustbox} % to make tables fit pages
 
 % Macros
 \renewcommand{\linenumberfont}{\tiny\color{gray}} % make linenum small and gray
-\renewcommand{\thefootnote}{\arabic{footnote}}
-\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % for l2 norm in equations
 
 % Paths (self-contained)
 \newcommand{\pathBIB}{./bib}
 \newcommand{\pathFIG}{./figures}
 
-% Article information
 % Article information
 \title{Paper title}
 \shorttitle{Short title}
@@ -105,50 +94,20 @@
   +31 **************
   }
 
-% Abstract
-\abstract{
-This is some abstract.}
-
 % Main Document -------------------------------------------------------------- %
 
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
-	\maketitle
 
-    % Start section header numbering here
-    \setcounter{secnumdepth}{3} % up to depth 3
+    % Make title
+  	\maketitle
 
-    % Paper content
+    % Start line numbering here
+    \linenumbers
+
+    % Content
     
-\section{Introduction}
-
-    A strong and commanding introduction.
-
-\subsection{The power of knowing}
-
-    Followed by a good description of previous studies \citep{collinsEtAl:2001}.
-    
-\section{Imputation methods and algorithms}\label{sec:methods}
-
-	A selection of methods
-
-\subsection{Method 1}
-
-	Very cool method 1.
-
-\subsection{Method 2}
-
-	Very cool method 2.
-
-\subsubsection{Aspect 1}
-
-	Aspect 1
-
-\subsubsection{Aspect 2}
-
-	Aspect 2
-    
-\section{Simulation study 1}
+\section{Simulation study 2}
 
 	Why we did what we did.
 
@@ -174,56 +133,13 @@ This is some abstract.}
 	
 	What results did we report
 
-	% Load plots for this section
-
-
 \subsubsection{Aspect 1}
 
 	Here is a picture of what happened
 
-	\begin{figure}
-	\centering
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-
-{\centering \includegraphics[width=\maxwidth]{figure/plot-pdf-1} 
-
-}
-
-
-\end{knitrout}
-		\caption{\label{fig:dist} Some caption }
-	\end{figure}
-
 \subsubsection{Aspect 2}
 
-	This is something else we found.
-    
-\section{Limitations and future directions}
-
-	This is what's left to be done.
-    
-\section{Discussion}
-
-\subsection{Methods that work well}
-
-	Discuss it.
-
-\subsection{Methods with mixed results}
-
-	And discuss it.
-    
-    % Stop section header numbering here
-    \setcounter{secnumdepth}{4}
-
-    \section{Availability of data and materials}
-
-    The EVS data that support the findings of this study are openly available in GESIS Data Archive at https://doi.org/10.4232/1.13511, reference number ZA7500.
-    
-    \section{Code availability}
-
-    The code used for the study is available at the corresponding author's GitHub page: [\url{https://github.com/EdoardoCostantini/some-url}].
-    Please read the README.md files for instructions on how to replicate the results.
+	This is what we find
 
     % References
     
