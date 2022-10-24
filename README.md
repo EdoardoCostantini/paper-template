@@ -43,11 +43,11 @@ You can compile any desired version of the paper using the `compile.sh` bash scr
 
 After a few commits, you might want to generate a pdf showing the differences between the current version of the paper and any previous one. This can be done easily with the `trackChanges.sh` bash script. To achieve this, run the following command in a terminal window located at the root of the paper folder:
     <pre><code>. trackChanges.sh document_version.Rnw SHA_old SHA_new </code></pre>
-    which will create a `document_version-SHA_old-SHA_new.pdf` in the pdf folder.
+    which will create a `document_version_diff_SHA_old-SHA_new.pdf` in the pdf folder.
     For example,
-    <pre><code>. compile.sh main-arxiv.Rnw </code></pre>
-    produces the `main-arxiv.pdf` file
-
+    <pre><code>. trackChanges.sh main-journal.Rnw 12376d19f157d927714aeff0cd1a098a4e087bdd 6c032dc00dede5d862be42fa8f7ae559f7485b5f </code></pre>
+    produces the file:
+    `main-journal_diff_12376d19f157d927714aeff0cd1a098a4e087bdd_6c032dc00dede5d862be42fa8f7ae559f7485b5f.pdf`
 
 # Repository structure
 
