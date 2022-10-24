@@ -9,13 +9,8 @@ This is the template for a LaTex Rnw project. Editing should be done only in the
 This directory contains:
 - **section_##.Rnw**, the files where the actual content of the paper is written.
 - **document_version.Rnw**, the global files calling all the other section files to make up the final manuscript.
-- **compile.sh** is a shell script to compile a pdf of any **document_version.Rnw**. For this script to work the relative paths of files must remain the same as in the original folder.
-To get the pdf version of your manuscript simply type the following in a terminal window working in the root folder of your paper project:
-  <pre><code>. compile.sh document_version.Rnw</code></pre>
-  which will create a `document_version.pdf` in the pdf folder.
-  For example,
-  <pre><code>. compile.sh main-arxiv.Rnw</code></pre>
-  produces the `main-arxiv.pdf` file
+- **compile.sh** is a shell script to compile a pdf of any **document_version.Rnw**.
+- **trackChanges.sh** is a shell script to obtain track changes pdf versions of the paper
 - **makearxiv.sh** is a shell script to create a zip archive that can be uploaded on arxiv.org and compiled by AutoTeX.
 - **bib** is the folder containing the .bib file for the bibliography.
 - **code** is the folder containing the R scripts defining the plots.
@@ -27,6 +22,32 @@ To get the pdf version of your manuscript simply type the following in a termina
   - `mtcars.rds` is just an example dataset
 - **figure** is the folder where the pictures will be stored. You do not need to actively interact with this folder.
 - **style** is the folder containing the .cls and .bst files for general formatting of the manuscript.
+
+# How to compile pdfs
+
+## Clean version
+You can compile any desired version of the paper using the `compile.sh` bash script.
+
+1. Create a `document_version.Rnw` with the desired latex preamble (style, paper title, authors, etc.)
+2. Add calls to the desired sections to include in the manuscript
+    - Include `section_##.Rnw` by using
+    - Include `section_##.tex` by using
+3. Open a terminal window located at the root of the paper folder
+4. Execute the following line of code in the terminal
+    <pre><code>. compile.sh document_version.Rnw</code></pre>
+    which will create a `document_version.pdf` in the pdf folder.
+    For example,
+    <pre><code>. compile.sh main-arxiv.Rnw</code></pre>
+    produces the `main-arxiv.pdf` file
+## Track-changes versions
+
+After a few commits, you might want to generate a pdf showing the differences between the current version of the paper and any previous one. This can be done easily with the `trackChanges.sh` bash script. To achieve this, run the following command in a terminal window located at the root of the paper folder:
+    <pre><code>. trackChanges.sh document_version.Rnw SHA_old SHA_new </code></pre>
+    which will create a `document_version-SHA_old-SHA_new.pdf` in the pdf folder.
+    For example,
+    <pre><code>. compile.sh main-arxiv.Rnw </code></pre>
+    produces the `main-arxiv.pdf` file
+
 
 # Repository structure
 
