@@ -1,5 +1,5 @@
 # Project:   paper-template
-# Objective: Knit any main document
+# Objective: Initialize environment and knit any main document
 # Author:    Edoardo Costantini
 # Created:   2022-10-13
 # Modified:  2022-10-13
@@ -13,7 +13,10 @@ library(knitr)
 library(mice)
 
 # Possibly load data to use in the different Rnws
-# readRDS()
+results <- readRDS("./data/mtcars.rds")
+
+# Source plotting functions
+source("./code/functions.R")
 
 # Compose name of Rnw based on input
 Rnw_file <- paste0(args, ".Rnw")

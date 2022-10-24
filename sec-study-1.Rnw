@@ -24,33 +24,22 @@
 	
 	What results did we report
 
+	% Load plots for this section
+	<<section-plots, cache = FALSE, echo = F>>=
+		read_chunk("./code/sec-study-1-plots.R")
+	@
+
 \subsubsection{Aspect 1}
 
 	Here is a picture of what happened
-		
-	<<plot-distribution, cache = FALSE, echo = F>>=
-	read_chunk("./code/plot-distribution.R")
-	@
 
 	\begin{figure}
 	\centering
-		<<plot-distribution, echo = F, fig.align = "center", fig.dim = c(8, 4.5)>>=
+		<<plot-pdf, echo = F, fig.align = "center", fig.dim = c(8, 4.5)>>=
 		@
 		\caption{\label{fig:dist} Some caption }
 	\end{figure}
 
 \subsubsection{Aspect 2}
 
-	This is what we find
-
-	<<plot-mice, cache = FALSE, echo = F>>=
-	read_chunk("./code/plot-mice.R")
-	@
-
-	\begin{figure}
-	\centering
-		<<plot-mice, echo = F, fig.align = "center", fig.dim = c(8, 4.5)>>=
-		@
-		\caption{\label{fig:mice} md.patterns plot }
-	\end{figure}
-
+	This is something else we found.

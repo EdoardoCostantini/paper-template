@@ -4,6 +4,6 @@
 # Created:   2022-10-12
 # Modified:  2022-10-12
 
-# ---- plot-mice ----
+# ---- plot-pdf ----
 
-object <- md.pattern(nhanes)
+  plotPDF(mtcars[, 3])

@@ -4,26 +4,17 @@ Repository hosting the LaTeX manuscript for a paper comparing different MI-PCR s
 
 # Repository contents
 
-This is a LaTex Rnw project. Editing should be done only in the `Rnw` files as the `.tex` are updated based on them upon compilation. 
-There are three `.Rwn` files:
-
-- `BRM.Rnw` - version of the paper for Behavior Research Methods Journal
-- `arxiv.Rnw` - preprint version for arxiv.org
-- `draft.Rnw` - generic draft
-
-These files require inputs a mix of `.Rnw` and `.tex` files that are woven by `knitr` by the `.compile.sh` bash script.
-In this project, all the sections of the manuscript are stored in `.Rnw` files.
-Always work in the `.Rnw` file to change the content of the paper.
-Some additional sections are provided in `.tex` format as they will never require the use of R code.
+This is the template for a LaTex Rnw project. Editing should be done only in the `Rnw` files as the `.tex` are updated based on them upon compilation. 
 
 This directory contains:
 - **section_##.Rnw**, the files where the actual content of the paper is written.
-- **document_version.Rnw**, the global files calling all the other section files to make up the actual document.
+- **document_version.Rnw**, the global files calling all the other section files to make up the final manuscript.
 - **compile.sh** is a shell script to compile a pdf of any **document_version.Rnw** (the comments within it describe how to run the shell script). For this script to work the relative paths of files must remain the same as in the original folder.
 - **makearxiv.sh** is a shell script to create a zip archive that can be uploaded on arxiv.org and compiled by AutoTeX.
-- **bib** is the folder containing the .bib files for the bibliography.
+- **bib** is the folder containing the .bib file for the bibliography.
 - **code** is the folder containing the R scripts defining the plots.
   The scripts for the simulation study plots use plotting functions that are stored in the script `functions.R`.
+- **data** a folder containig the data files to plot
 - **figure** is the folder where the pictures are stored.
 - **style** is the folder containing the .cls and .bst files for general formatting of the manuscript.
 
