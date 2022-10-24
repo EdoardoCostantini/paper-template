@@ -1,0 +1,19 @@
+\section{Imputation methods and algorithms}\label{sec:methods}
+
+	A selection of methods
+
+\subsection{Method 1}
+
+	Very cool method 1.
+
+\subsection{Method 2}
+
+	Very cool method 2.
+
+\subsubsection{Aspect 1}
+
+	Aspect 1
+
+\subsubsection{Aspect 2}
+
+	Aspect 2

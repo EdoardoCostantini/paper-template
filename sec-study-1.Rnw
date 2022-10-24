@@ -1,0 +1,56 @@
+\section{Simulation study 1}
+
+	Why we did what we did.
+
+\subsection{Simulation study procedure}
+
+\subsubsection{Data generation}
+
+	How we generated data	
+
+\subsubsection{Missing data imposition}\label{sub-missing}
+
+	How we imposed missing data	
+
+\subsubsection{Imputation}
+
+	Imputation models specification
+
+\subsubsection{Analysis and comparison criteria}\label{criteria}
+
+	Outcome measures
+
+\subsection{Results}
+	
+	What results did we report
+
+\subsubsection{Aspect 1}
+
+	Here is a picture of what happened
+		
+	<<plot-distribution, cache = FALSE, echo = F>>=
+	read_chunk("./code/plot-distribution.R")
+	@
+
+	\begin{figure}
+	\centering
+		<<plot-distribution, echo = F, fig.align = "center", fig.dim = c(8, 4.5)>>=
+		@
+		\caption{\label{fig:dist} Some caption }
+	\end{figure}
+
+\subsubsection{Aspect 2}
+
+	This is what we find
+
+	<<plot-mice, cache = FALSE, echo = F>>=
+	read_chunk("./code/plot-mice.R")
+	@
+
+	\begin{figure}
+	\centering
+		<<plot-mice, echo = F, fig.align = "center", fig.dim = c(8, 4.5)>>=
+		@
+		\caption{\label{fig:mice} md.patterns plot }
+	\end{figure}
+

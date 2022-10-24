@@ -1,0 +1,33 @@
+\section{Simulation study 2}
+
+	Why we did what we did.
+
+\subsection{Simulation study procedure}
+
+\subsubsection{Data generation}
+
+	How we generated data	
+
+\subsubsection{Missing data imposition}\label{sub-missing}
+
+	How we imposed missing data	
+
+\subsubsection{Imputation}
+
+	Imputation models specification
+
+\subsubsection{Analysis and comparison criteria}\label{criteria}
+
+	Outcome measures
+
+\subsection{Results}
+	
+	What results did we report
+
+\subsubsection{Aspect 1}
+
+	Here is a picture of what happened
+
+\subsubsection{Aspect 2}
+
+	This is what we find

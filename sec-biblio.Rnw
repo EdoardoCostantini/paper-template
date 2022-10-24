@@ -1,0 +1,5 @@
+\bibliographystyle{./style/asj}
+
+\bibliography{
+	\pathBIB/bibshelf
+}

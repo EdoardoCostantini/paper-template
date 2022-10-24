@@ -1,0 +1,75 @@
+% Project:  paper-mipcr-compare
+% Type:     Journal version
+% Author:   Edoardo Costantini
+% Created:  2022-04-25
+% Modified: 2022-06-10
+% Notes:    Inclusion of subfolders is as reccomended by 
+%           https://yihui.org/knitr/demo/child/
+
+% Preamble ------------------------------------------------------------------- %
+
+\documentclass[a4paper,man,floatsintext,natbib]{apa6}
+
+% Latex packagaes
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{hyperref}
+\usepackage{alltt}  % for something Rnw related
+\usepackage{framed} % for something Rnw related
+\usepackage{lineno}
+\usepackage{color}
+
+% Macros
+\renewcommand{\linenumberfont}{\tiny\color{gray}} % make linenum small and gray
+
+% Paths (self-contained)
+\newcommand{\pathBIB}{./bib}
+\newcommand{\pathFIG}{./figures}
+
+% Article information
+\title{Paper title}
+\shorttitle{Short title}
+\twoauthors
+	{Edoardo Costantini}
+	{Author 2}
+\twoaffiliations
+	{Tilburg University, Department of Methodology and Statistics}
+	{Utrecht University, Department of Methodology and Statistics}
+\authornote{
+  Corresponding author's contacts: \\
+  e.costantini@tilburguniversity.edu; \\
+  +31 6 33 74 21 68
+  }
+
+% Abstract
+\abstract{\Sexpr{knit_child("sec-abstract.Rnw")}}
+
+% Main Document -------------------------------------------------------------- %
+
+\begin{document}
+	\maketitle
+
+    % Start line numbering here
+    \linenumbers
+
+    % Start section header numbering here
+    \setcounter{secnumdepth}{3} % up to depth 3
+
+    % Paper content
+    \Sexpr{knit_child("sec-introduction.Rnw")}
+    \Sexpr{knit_child("sec-methods.Rnw")}
+    \Sexpr{knit_child("sec-study-1.Rnw")}
+    \Sexpr{knit_child("sec-study-2.Rnw")}
+    \Sexpr{knit_child("sec-limits.Rnw")}
+    \Sexpr{knit_child("sec-discussion.Rnw")}
+    
+    % Stop section header numbering here
+    \setcounter{secnumdepth}{4}
+
+    % References
+    \Sexpr{knit_child("sec-biblio.Rnw")}
+
+\end{document}

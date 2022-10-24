@@ -1,0 +1,9 @@
+\section{Discussion}
+
+\subsection{Methods that work well}
+
+	Discuss it.
+
+\subsection{Methods with mixed results}
+
+	And discuss it.
