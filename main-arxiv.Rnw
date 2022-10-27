@@ -2,7 +2,7 @@
 % Type:     pre-print version
 % Author:   Edoardo Costantini
 % Created:  2022-08-29
-% Modified: 2022-08-29
+% Modified: 2022-10-27
 
 % Preamble ------------------------------------------------------------------- %
 
@@ -39,7 +39,6 @@
 \newcommand{\pathBIB}{./bib}
 \newcommand{\pathFIG}{./figures}
 
-% Article information
 % Article information
 \title{Paper title}
 \shorttitle{Short title}
