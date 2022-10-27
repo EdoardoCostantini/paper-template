@@ -77,7 +77,7 @@
 
     \section{Availability of data and materials}
 
-    The EVS data that support the findings of this study are openly available in GESIS Data Archive at https://doi.org/10.4232/1.13511, reference number ZA7500.
+    The data that support the findings of this study are available at [\url{https://some-url}].
     
     \section{Code availability}
 
