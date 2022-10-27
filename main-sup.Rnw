@@ -2,12 +2,11 @@
 % Type:     supplementary material
 % Author:   Edoardo Costantini
 % Created:  2021-12-17
-% Modified: 2022-06-10
+% Modified: 2022-10-27
 
 % Preamble ------------------------------------------------------------------- %
 
 \documentclass[a4paper,man,floatsintext,natbib]{apa6}
-% \documentclass[a4paper,man,natbib]{apa6}
 
 % Packagaes
 \usepackage[english]{babel}
