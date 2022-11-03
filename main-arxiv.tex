@@ -2,11 +2,14 @@
 % Type:     pre-print version
 % Author:   Edoardo Costantini
 % Created:  2022-08-29
-% Modified: 2022-10-27
+% Modified: 2022-11-03
+% Notes:    Inclusion of files is as recommended by 
+%           https://yihui.org/knitr/demo/child/
 
 % Preamble ------------------------------------------------------------------- %
 
-\documentclass[a4paper,doc,floatsintext,natbib]{apa6}\usepackage[]{graphicx}\usepackage[]{xcolor}
+% \documentclass[a4paper,man,floatsintext]{apa6} % floats in text
+\documentclass[a4paper,man]{apa6}\usepackage[]{graphicx}\usepackage[]{xcolor}
 % maxwidth is the original width if it is less than linewidth
 % otherwise use linewidth (to make sure the graphics do not exceed the margin)
 \makeatletter
@@ -56,33 +59,26 @@
 \definecolor{errorcolor}{rgb}{1, 0, 0}
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
-\usepackage{alltt}
+\usepackage{alltt} % floats after text
 
-% Packagaes
+% Packages from APA template
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
-\usepackage{bm}
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
-\usepackage[
-	colorlinks,
-	bookmarksopen,
-	bookmarksnumbered,
-	citecolor=red,
-	urlcolor=red]{hyperref}	% automatic pdf outline and hyperlinks style
-\usepackage{lineno} % for line numbering
-\usepackage{color}
-\usepackage{xcolor}			% for colors to track changes
-\usepackage{placeins} 		% for FloatBarrier
-\usepackage[normalem]{ulem} % for strikeout corrections
-\usepackage{lineno} % for line numbering
-\usepackage{tabularx}
+
+% Other packages I need
+\usepackage{hyperref}  % for clickable links
+\usepackage{natbib}    % for citations
+  \bibliographystyle{./style/asj} % to define citaiton style
+\usepackage{lineno}    % for line numbering
+\usepackage{color}     % for changing colors
 \usepackage{adjustbox} % to make tables fit pages
+\usepackage{placeins}  % for FloatBarrier
 
 % Macros
-\renewcommand{\linenumberfont}{\tiny\color{gray}} % make linenum small and gray
-\renewcommand{\thefootnote}{\arabic{footnote}}
+\renewcommand{\linenumberfont}{\tiny\color{gray}} % make line number small and gray
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % for l2 norm in equations
 
 % Paths (self-contained)
@@ -225,11 +221,6 @@ This is some abstract.}
     Please read the README.md files for instructions on how to replicate the results.
 
     % References
-    
-\bibliographystyle{./style/asj}
-
-\bibliography{
-	\pathBIB/bibshelf
-}
+    \bibliography{\pathBIB/bibshelf}
 
 \end{document}

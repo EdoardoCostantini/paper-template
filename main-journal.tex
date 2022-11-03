@@ -2,13 +2,14 @@
 % Type:     Journal version
 % Author:   Edoardo Costantini
 % Created:  2022-04-25
-% Modified: 2022-06-10
-% Notes:    Inclusion of subfolders is as reccomended by 
+% Modified: 2022-11-03
+% Notes:    Inclusion of files is as recommended by 
 %           https://yihui.org/knitr/demo/child/
 
 % Preamble ------------------------------------------------------------------- %
 
-\documentclass[a4paper,man,floatsintext,natbib]{apa6}\usepackage[]{graphicx}\usepackage[]{xcolor}
+% \documentclass[a4paper,man,floatsintext]{apa6} % floats in text
+\documentclass[a4paper,man]{apa6}\usepackage[]{graphicx}\usepackage[]{xcolor}
 % maxwidth is the original width if it is less than linewidth
 % otherwise use linewidth (to make sure the graphics do not exceed the margin)
 \makeatletter
@@ -58,22 +59,27 @@
 \definecolor{errorcolor}{rgb}{1, 0, 0}
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
-\usepackage{alltt}
+\usepackage{alltt} % floats after text
 
-% Latex packagaes
+% Packages from APA template
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
-\usepackage{hyperref}
-\usepackage{alltt}  % for something Rnw related
-\usepackage{framed} % for something Rnw related
-\usepackage{lineno}
-\usepackage{color}
+
+% Other packages I need
+\usepackage{hyperref}  % for clickable links
+\usepackage{natbib}    % for citations
+  \bibliographystyle{./style/asj} % to define citaiton style
+\usepackage{lineno}    % for line numbering
+\usepackage{color}     % for changing colors
+\usepackage{adjustbox} % to make tables fit pages
+\usepackage{placeins}  % for FloatBarrier
 
 % Macros
-\renewcommand{\linenumberfont}{\tiny\color{gray}} % make linenum small and gray
+\renewcommand{\linenumberfont}{\tiny\color{gray}} % make line number small and gray
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % for l2 norm in equations
 
 % Paths (self-contained)
 \newcommand{\pathBIB}{./bib}
@@ -209,11 +215,6 @@ This is some abstract.}
     \setcounter{secnumdepth}{4}
 
     % References
-    
-\bibliographystyle{./style/asj}
-
-\bibliography{
-	\pathBIB/bibshelf
-}
+    \bibliography{\pathBIB/bibshelf}
 
 \end{document}
